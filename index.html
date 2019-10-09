@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>books API</title>
+
+</head>
+<body>
+<form action="" name="searchBooksForm">
+    <label for="search_book_name">Название книги</label>
+    <input class="search_input" name="q" id="search_book_name" type="text" placeholder="введите название книги"><br/>
+    <label for="filter">Доступность книги</label>
+    <select name="filter" id="filter">
+        <option value="ebooks">все</option>
+        <option value="paid-ebooks">платные</option>
+        <option value="free-ebooks">бесплатные</option>
+    </select><br/>
+    <label for="printType">Тип печати</label>
+    <select name="printType" id="printType">
+        <option value="all">все</option>
+        <option value="magazines">журналы</option>
+        <option value="books">книги</option>
+    </select>
+    <button class="search_button">Search</button>
+</form>
+<div id="test"></div>
+<script src="index.js"></script>
+</body>
+</html>
