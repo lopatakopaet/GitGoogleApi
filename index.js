@@ -1,4 +1,4 @@
-let userRequestInput = document.querySelector('.search_input');
+// let userRequestInput = document.querySelector('.search_input');
 let buttonElem = document.querySelector('.search_button');
 let booksSectionElem = document.querySelector('.books_section_wrap');
 
@@ -12,7 +12,6 @@ class getBooks {
         this.request = request;
         this.getRequest = this.getRequest.bind(this);
     }
-
     // getRequest = () =>{
     //     const{url,request,urlApi,myResult} = this;
     //     let test;
@@ -28,11 +27,6 @@ class getBooks {
         return data;
     }
 }
-
-/**
- *
- */
-
 buttonElem.addEventListener('click', (e) => {
     e.preventDefault();
     booksSectionElem.innerHTML = `
@@ -81,68 +75,12 @@ buttonElem.addEventListener('click', (e) => {
                         <p><span class="bold">Название книги: </span><span class="cursive">${elem.volumeInfo.title}</span></p>
                         <p><span class="bold">Автор(ы):</span> ${elem.volumeInfo.authors ? elem.volumeInfo.authors : "Автор не найден"}</p>
                         <p> <span class="bold">Опубликованно:</span> ${elem.volumeInfo.publishedDate ? elem.volumeInfo.publishedDate : 'Дата публикации не найдена'}</p>
-                         <p><span class="bold">Цена:</span> ${elem.saleInfo.saleability == "FOR_SALE" ? elem.saleInfo.listPrice.amount: 'FREE' }</p>
+                         <p><span class="bold">Цена:</span> ${elem.saleInfo.saleability == "FOR_SALE" ? elem.saleInfo.listPrice.amount: `<span class="green">FREE</span>`}</p>
                     </div>
-
             `;
                 tempNode.appendChild(node);
             })
             booksSectionElem.innerHTML = tempNode.innerHTML;
-    //         return res.items.map(elem => {
-    //             let node = document.createElement('div');
-    //
-    //             node.classList.add('book_block_wrap');
-    //             node.innerHTML = `
-    //                 <div class="img_wrap">
-    //                     <img src="${elem.volumeInfo.imageLinks.smallThumbnail}" alt="книга по запросу">
-    //                 </div>
-    //                 <span>Название книги:${elem.volumeInfo.title}</span>
-    //                 <span>Автор(ы): ${elem.volumeInfo.authors ? elem.volumeInfo.authors : "Автор не найден"}</span>
-    //                 <span>Цена: ${elem.saleInfo.saleability == "FOR_SALE" ? elem.saleInfo.listPrice.amount: 'FREE' }</span>
-    //                 <span>Опубликованно: ${elem.volumeInfo.publishedDate ? elem.volumeInfo.publishedDate : 'Дата публикации не найдена'}</span>
-    //
-    //         `;
-    //
-    //         })
-    //
-    //
-    //
         })
-    // .then(res => {
-    //     booksSectionElem.innerHTML = '';
-    //     booksSectionElem.appendChild(res);
-    //     if (elem.saleInfo.saleability == "FOR_SALE") {
-    //         console.log(elem.saleInfo.listPrice.amount)
-    //     } else console.log('FREE')
-    //     console.log(res)
-    // })
 })
-/**
- * ${elem.volumeInfo.publishedDate}  опубликовано
- * ${elem.volumeInfo.title} название книги
- * ${elem.volumeInfo.authors} авторы
- * ${elem.volumeInfo.language} язык
- * ${elem.saleInfo.listPrice.amount} цена книги
- * ${elem.saleInfo.saleability}   "FOR_SALE"  "FREE" - платная и бесплатная книги
- * ${elem.volumeInfo.imageLinks.smallThumbnail}
- * ${elem.volumeInfo.imageLinks.smallThumbnail}
- */
-
-
-// https://www.googleapis.com/books/v1/volumes?q=${autor}&filter=${filter)
-// let newTest = fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor')
-//     .then((res)=>res.json())
-
-///////test API/////
-
-
-// let test =()=>{
-// }
-// // fetch('https://api.spoonacular.com/recipes/search?query=cheese&number=2&key=81f3c567351544b2a155e694c7f00b76')
-// fetch('http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3',
-//     {mode:'no-cors'})
-//     // .then((res) => res.json())
-//     .then((res) => console.log(res))
-//
-// test()
 

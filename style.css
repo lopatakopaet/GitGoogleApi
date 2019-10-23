@@ -11,6 +11,9 @@
 .cursive{
     font-style: italic;
 }
+.green{
+    color: green;
+}
 .books_section_wrap{
     display: flex;
     flex-wrap: wrap;
@@ -38,16 +41,15 @@
     margin: 5px 0;
 }
 .search_form{
-    /*width: 100%;*/
     display: flex;
     flex-direction: column;
-    /*flex-wrap: wrap;*/
+    align-items: center;
 }
 .search_input{
-    width: 600px;
+    width: 595px;
     height: 30px;
     margin: 10px 0;
-    padding: 0;
+    padding: 0 5px;
     border: 1px solid grey;
     border-right: none;
     border-bottom-left-radius: 7px;
@@ -55,7 +57,7 @@
 }
 .search_input-wrap{
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
 }
 .search_button{
@@ -64,6 +66,12 @@
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
     cursor: pointer;
+}
+.selects_wrap{
+    display: flex;
+    /*margin: 0 auto;*/
+    justify-content: space-between;
+    width: 420px;
 }
 
 @keyframes spin {

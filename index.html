@@ -6,62 +6,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app">
-<form class="search_form" action="" name="searchBooksForm">
-<!--    <label for="search_book_name">Название книги</label>-->
-    <div class="search_input-wrap">
-        <input class="search_input" name="q" id="search_book_name" type="text" placeholder="введите название книги"><br/>
-        <button class="search_button">Search</button>
+    <div class="app">
+        <form class="search_form" action="" name="searchBooksForm">
+            <!--    <label for="search_book_name">Название книги</label>-->
+            <div class="search_input-wrap">
+                <input class="search_input" name="q" id="search_book_name" type="text" placeholder="введите название книги"><br/>
+                <button class="search_button">Search</button>
+            </div>
+            <div class="selects_wrap">
+                <div>
+                    <label for="filter">Доступность книги</label>
+                    <select name="filter" id="filter">
+                        <option value="ebooks">все</option>
+                        <option value="paid-ebooks">платные</option>
+                        <option value="free-ebooks">бесплатные</option>
+                    </select><br/>
+                </div>
+                <div>
+                    <label for="printType">Тип печати</label>
+                    <select name="printType" id="printType">
+                        <option value="all">все</option>
+                        <option value="magazines">журналы</option>
+                        <option value="books">книги</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="books_section_wrap"></div>
     </div>
-    <label for="filter">Доступность книги</label>
-    <select name="filter" id="filter">
-        <option value="ebooks">все</option>
-        <option value="paid-ebooks">платные</option>
-        <option value="free-ebooks">бесплатные</option>
-    </select><br/>
-    <label for="printType">Тип печати</label>
-    <select name="printType" id="printType">
-        <option value="all">все</option>
-        <option value="magazines">журналы</option>
-        <option value="books">книги</option>
-    </select>
-<!--    <button class="search_button">Search</button>-->
-</form>
-<div class="books_section_wrap">
-<!--    <div class="book_block_wrap">-->
-<!--        <div class="img_wrap">-->
-<!--            <img src="http://books.google.com/books/content?id=fiBbdJ1sdA8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"-->
-<!--                 alt="">-->
-<!--        </div>-->
-<!--        <span>Название книги:</span>-->
-<!--        <span>Автор(ы):</span>-->
-<!--        <span>Цена:</span>-->
-<!--        <span>Опубликованно:</span>-->
-<!--    </div>-->
-</div>
-
-<!--<div class="loading-window">-->
-<!--    <div class="car">-->
-<!--        <div class="strike"></div>-->
-<!--        <div class="strike strike2"></div>-->
-<!--        <div class="strike strike3"></div>-->
-<!--        <div class="strike strike4"></div>-->
-<!--        <div class="strike strike5"></div>-->
-<!--        <div class="car-detail spoiler"></div>-->
-<!--        <div class="car-detail back"></div>-->
-<!--        <div class="car-detail center"></div>-->
-<!--        <div class="car-detail center1"></div>-->
-<!--        <div class="car-detail front"></div>-->
-<!--        <div class="car-detail wheel"></div>-->
-<!--        <div class="car-detail wheel wheel2"></div>-->
-<!--    </div>-->
-
-<!--    <div class="text">-->
-<!--        <span>Loading</span><span class = "dots">...</span>-->
-<!--    </div>-->
-</div>
-
-</div>
 <script src="index.js"></script>
 </body>
 </html>
